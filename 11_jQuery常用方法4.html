@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			table{
+				border: 1px solid black;
+				width: 50%;
+				margin: 50px auto;
+			}
+		</style>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function  () {
+				var data = [
+					{"name":"xiaoming1","age":"11","qq":"11111"},
+					{"name":"xiaoming2","age":"11","qq":"11111"},
+					{"name":"xiaoming3","age":"11","qq":"11111"},
+					{"name":"xiaoming4","age":"11","qq":"11111"},
+					{"name":"xiaoming5","age":"11","qq":"11111"},
+					{"name":"xiaoming6","age":"11","qq":"11111"},
+				]
+				var trHtml = "<tr><td>姓名</td><td>年龄</td><td>qq</td></tr>";
+				//each循环数组
+				$(data).each(function  (index,item) {
+					console.log(index,item);
+					trHtml += "<tr><td>"+item.name+"</td><td>"+item.age+"</td><td>"+item.qq+"</td></tr>";
+				})
+				$("table").html(trHtml);
+			})
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+		</script>
+		<table>
+			<tr><td>姓名</td><td>年龄</td><td>qq</td></tr>
+			<tr><td>张三</td><td>20</td><td>11111</td></tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<ul>
+		    <li><button class="down">⬇️</button>新闻标题1<button class="up">⬆️</button></li>
+		    <li><button class="down">⬇️</button>新闻标题2<button class="up">⬆️</button></li>
+		    <li><button class="down">⬇️</button>新闻标题3<button class="up">⬆️</button></li>
+		    <li><button class="down">⬇️</button>新闻标题4<button class="up">⬆️</button></li>
+		    <li><button class="down">⬇️</button>新闻标题5<button class="up">⬆️</button></li>
+		    <li><button class="down">⬇️</button>新闻标题6<button class="up">⬆️</button></li>
+		</ul>
+		<script type="text/javascript">
+			$(".down").click(function  () {
+				if ($(this).closest("li").next().length === 0) {
+					alert("到底啦");
+				} else{
+					$(this).closest("li").insertAfter($(this).closest("li").next());
+				}
+			});
+			$(".up").click(function  () {
+				if ($(this).closest("li").prev().length === 0) {
+					alert("到顶啦")
+				} else{
+					$(this).closest("li").insertBefore($(this).closest("li").prev());
+				}
+			});
+		</script>
+	</body>
+</html>

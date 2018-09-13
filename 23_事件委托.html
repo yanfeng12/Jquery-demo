@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="text" id="" value="" /><button type="button">添加</button>
+		<ul id="ul1">
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+		<script type="text/javascript">
+			$("button").click(function  () {
+				var li2 = "<li>"+$("input").val()+"</li>";
+				$("#ul1").append($(li2));
+				
+			});
+			// 点击li 让字体变成红色
+			// 本来该li做的事情，委托给他的父亲来做
+// 			$("#ul1").on("click", "li", function () {
+// 				$(this).css("color", "red")
+// 			});
+			$("#ul1").delegate("li", "click", function () {
+				$(this).css("color", "red")
+			});
+		</script>
+	</body>
+</html>

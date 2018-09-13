@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div>div1</div>
+			<div>div2</div>
+			<p>p1</p>
+			<span>span1</span>
+		</div>
+		<table>
+		    <tr>
+		        <td>张三1</td>
+		        <td>23</td>
+		        <td>1454554</td>
+		        <td><button>删除</button></td>
+		    </tr>
+		    <tr>
+		        <td>张三2</td>
+		        <td>23</td>
+		        <td>1454554</td>
+		        <td><button>删除</button></td>
+		    </tr>
+		    <tr>
+		        <td>张三3</td>
+		        <td>23</td>
+		        <td>1454554</td>
+		        <td><button>删除</button></td>
+		    </tr>
+		</table>
+		<script type="text/javascript">
+			//选择器的形式去找元素
+			console.log($("#wrap p"));
+			//通过jquery方法的形式去找元素
+			console.log($("#wrap").find("p"));
+			
+			
+			//closest查找父级最近的元素
+			$("button").click(function  () {
+				$(this).closest("tr").remove()
+			})
+		</script>
+	</body>
+</html>

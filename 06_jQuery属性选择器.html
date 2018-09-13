@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="text" id="" value="username" />
+		<input type="text" id="" value="useremail" />
+		<input type="text" id="" value="new username" />
+		<input type="text" id="" value="new useremail" />
+		<input type="password" name="" />
+		<div id="box">
+			哈哈哈哈哈哈哈哈
+		</div>
+		<script type="text/javascript">
+			// $("input[value]").css("border","1px solid red");
+			// $("input[type=password]").css("border","1px solid red");
+			//*包含,value中只要有user都会被选中
+			// $("input[value*=user]").css("border","1px solid red");
+			//^以....开头
+			// $("input[value^=user]").css("border","1px solid red");
+			//$以...结尾
+			$("input[value$=name]").css("border","1px solid red");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button type="button">添加</button>
+		<script type="text/javascript">
+			$("button").click(function  () {
+				var btn = $("<button>xxx</button>");
+				//向后面添加after
+				//button后面添加btn
+				// $(this).after(btn);
+				// btn.insertAfter($(this));
+				
+				//before前面添加
+				$(this).before(btn);
+				btn.insertBefore($(this))
+				两个元素是同级关系
+				
+			})
+		</script>
+	</body>
+</html>

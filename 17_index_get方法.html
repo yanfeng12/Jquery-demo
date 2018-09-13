@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<ul>
+			<li>hello_1</li>
+			<li>hello_2</li>
+			<li>hello_3</li>
+			<li>hello_4</li>
+			<li>hello_5</li>
+			<li>hello_6</li>
+			<li>hello_7</li>
+			<li>hello_8</li>
+			<li>hello_9</li>
+			<li>hello_10</li>
+			<li>hello_11</li>
+			<li>hello_12</li>
+			<li>hello_13</li>
+			<li>hello_14</li>
+			<li>hello_15</li>
+			<li>hello_16</li>
+			<li>hello_17</li>
+			<li>hello_18</li>
+			<li>hello_19</li>
+			<li>hello_20</li>
+		</ul>
+		<script type="text/javascript">
+			$("li").click(function  () {
+				// console.log($(this).html());
+				console.log($(this).index());
+				//get 获取到集合中的某个元素
+				console.log($("li").get("2"));
+				
+			})
+		</script>
+	</body>
+</html>

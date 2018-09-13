@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- ul>li{yanfeng_$}*10 -->
+		<ul>
+			<li>yanfeng_1</li>
+			<li>yanfeng_2</li>
+			<li>yanfeng_3</li>
+			<li>yanfeng_4</li>
+			<li>yanfeng_5</li>
+			<li>yanfeng_6</li>
+			<li>yanfeng_7</li>
+			<li>yanfeng_8</li>
+			<li>yanfeng_9</li>
+			<li>yanfeng_10</li>
+		</ul>
+		<script type="text/javascript">
+			// $("li").css("color","red");
+			//只选中第一个
+			// $("li:first").css("color","red");
+			//只选最后一个
+			// $("li:last").css("color","red");
+			//选中下标为偶数的,下标从0开始
+			// $("li:even").css("color","red");
+			//奇数
+			// $("li:odd").css("color","green");
+			//下标等于2
+			// $("li:eq(2)").css("color","red");
+			//小于2
+			// $("li:lt(2)").css("color","red");
+			//大于2
+			// $("li:gt(2)").css("color","red");
+			//not排除符合条件的
+			$("li:not(li:eq(2))").css("color","red");
+		</script>
+	</body>
+</html>

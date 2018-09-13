@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="text" id="" value="" />
+		<button type="button">append</button>
+		<button type="button">appendTo</button>
+		<button type="button">prepend</button>
+		<button type="button">prependTo</button>
+		<ul id="ul1">
+			<li>1</li>
+		</ul>
+		<script type="text/javascript">
+			$("button:eq(0)").click(function  () {
+				//val获取或者设置input的值
+				var li1 = $("<li>"+$("input").val()+"</li>");
+				$("#ul1").append(li1);
+			});
+			$("button:eq(1)").click(function  () {
+				var li1 = $("<li>"+$("input").val()+"</li>");
+				li1.appendTo($("#ul1"));
+			})
+			$("button:eq(2)").click(function  () {
+				//val获取或者设置input的值
+				var li1 = $("<li>"+$("input").val()+"</li>");
+				$("#ul1").prepend(li1);
+			});
+			$("button:eq(3)").click(function  () {
+				var li1 = $("<li>"+$("input").val()+"</li>");
+				li1.prependTo($("#ul1"));
+			})
+			//总结： append 是在原有元素的后面去添加  prepend 是在原有元素的最前面去添加元素 
+			//两个元素是父子关系
+		</script>
+	</body>
+</html>

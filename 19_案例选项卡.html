@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#wrap div{
+				width: 200px;
+				height: 100px;
+				border:  1px solid red;
+				display: none;
+			}
+			#wrap div:nth-of-type(1){
+				display: block;
+			}
+			#wrap button:nth-of-type(1){
+				background-color: orangered;
+			}
+		</style>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<button type="button">button1</button>
+			<button type="button">button2</button>
+			<button type="button">button3</button>
+			<div>div1</div>
+			<div>div2</div>
+			<div>div3</div>
+		</div>
+		<script type="text/javascript">
+// 			$("button:eq(0)").click(function  () {
+// 				$("#wrap div:eq(0)").css("display","block");
+// 				$("#wrap div:eq(1)").css("display","none");
+// 				$("#wrap div:eq(2)").css("display","none");
+// // 				$(this).siblings().css("background","white");
+// // 				$(this).css("background","orangered");
+//                 $(this).css("background","orangered").siblings().css("background","white");
+// 			});
+// 			$("button:eq(1)").click(function  () {
+// 				$("#wrap div:eq(0)").css("display","none");
+// 				$("#wrap div:eq(1)").css("display","block");
+// 				$("#wrap div:eq(2)").css("display","none");
+// // 				$(this).siblings().css("background","white");
+// // 				$(this).css("background","orangered");
+// 				$(this).css("background","orangered").siblings().css("background","white");
+// 			});
+// 			$("button:eq(2)").click(function  () {
+// 				$("#wrap div:eq(0)").css("display","none");
+// 				$("#wrap div:eq(1)").css("display","none");
+// 				$("#wrap div:eq(2)").css("display","block");
+// // 				$(this).siblings().css("background","white");
+// // 				$(this).css("background","orangered");
+// 				$(this).css("background","orangered").siblings().css("background","white");
+// 			});
+// 			
+			
+			$("button").click(function  () {
+				$(this).css("background","orangered").siblings().css("background","white");
+// 				//获取下标
+// 				var index = $(this).index();
+// 				$("#wrap div").css("display",function  (i) {
+// 					console.log(i);
+// 					if (i == index) {
+// 						return "block";
+// 					}
+// 					return "none";
+// 				})
+
+                //$("#wrap div").get($(this).index()) 原生html原生
+                // $($("#wrap div").get($(this).index())) button的下标对应的div，这个div是jquery对象
+                // $($("#wrap div").get($(this).index())).css("display", "block").siblings("div").css("display", "none")
+                
+                //eq 获取到集合中某个下标的对象 返回的是一个jquery对象
+                //eq($(this).index()) 先获取到当前点击的button的下标 然后传给eq，eq就去div集合中找到和这个下标对应的div对象
+                //jquery针对显示有一个方法show  针对隐藏有一个方法 hide
+                $("#wrap div").eq($(this).index()).show().siblings("div").hide()
+			})
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<button type="button">获取数据</button>
+	<script type="text/javascript">
+		$("button").click(function () {
+			$("button").click(function () {
+				//通过ajax去获取数据
+				$.ajax({
+					type: "GET",
+					url: "https://cnodejs.org/api/v1/topics",
+					data: {
+						page: 1,
+						limit: 10
+					},
+					success: function (result) {
+						var html_str = ""
+						// console.log(result.data)
+						for (var i in result.data) {
+							console.log(result.data[i].title)
+							html_str += result.data[i].title + "<br />"
+						}
+						document.body.innerHTML = html_str
+
+					}
+				})
+				// $.get("https://cnodejs.org/api/v1/topics", function (result) {
+				//     console.log(result)
+				// })
+				// $.post()
+			})
+		})
+	</script>
+</body>
+
+</html>

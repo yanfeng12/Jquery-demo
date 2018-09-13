@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p>22</p>
+		</div>
+		<div class="box2">
+			<p>box2</p>
+			<div id="box3">
+				<p>box3</p>
+			</div>
+		</div>
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<span>1111</span>
+		<!-- 
+		 1.后代选择器：
+         写法：$("ancestor descendant")
+         例：$("div span")  指的是div标签下的所有span标签，不管是什么层级；
+
+         2.子代选择器：
+         写法：$("parent >  child")
+         例：$("div > span") 指的是div标签下的下一个层级的span，并不是所有；
+		 -->
+		<script type="text/javascript">
+			$("#box").css("background","green");
+			//类选择器
+			$(".box2").css("background","black");
+			//标签选择器
+			$("p").css("color","red");
+			//多元素选择器
+			$("span,p,#box").css("color","green");
+			//子元素选择器
+			$(".box2 > p").css("color","blue");
+			//后代选择器
+			$(".box2 p").css("background","yellow");
+		</script>
+	</body>
+</html>

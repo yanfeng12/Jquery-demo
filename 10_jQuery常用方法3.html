@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button type="button">设置样式</button>
+		<button type="button">获取样式</button>
+		<div>hello world_1</div>
+		<div>hello world_2</div>
+		<div>hello world_3</div>
+		<div>hello world_4</div>
+		<div>hello world_5</div>
+		<div>hello world_6</div>
+		<div>hello world_7</div>
+		<div>hello world_8</div>
+		<div>hello world_9</div>
+		<div>hello world_10</div>
+		<script type="text/javascript">
+			$("button:eq(0)").click(function  () {
+				// 链式写法
+				// $("div").css("background","red").css("color","white")
+// 				$("div").css({
+// 					"background":"red",
+// 					"color":"white"
+// 				})
+                //隔行换色
+                $("div").css("background",function  (index) {
+                	if (index %2 ==0) {
+                		return "red"
+                	}
+                })
+			})
+			$("button:eq(1)").click(function  () {
+				console.log($("div").css("background"))
+			})
+
+		</script>
+	</body>
+</html>

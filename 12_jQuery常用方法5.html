@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="node_modules/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button type="button">设置属性</button>
+		<button type="button">获取属性</button>
+		<button type="button">删除属性</button>
+		<div>yanfeng_1</div>
+		<div>yanfeng_2</div>
+		<div>yanfeng_3</div>
+		<div>yanfeng_4</div>
+		<div>yanfeng_5</div>
+		<script type="text/javascript">
+			$("button:eq(0)").click(function  () {
+				// $("div").attr("data-text","shuxing");
+				$("div").attr("data-text",function  (index) {
+					// console.log(index);
+					return "yanfeng"+index;
+				});
+				
+			});
+			$("button:eq(1)").click(function  () {
+				// 默认获取第一个
+// 				var a=$("div").attr("data-text");
+// 				console.log(a);
+				$("div").each(function  (index,item) {
+					//item是原生属性
+					var a = $(item).attr("data-text");
+					console.log(a);
+				})
+			});
+			$("button:eq(2)").click(function  () {
+				$("div").removeAttr("data-text");
+			})
+		</script>
+	</body>
+</html>
